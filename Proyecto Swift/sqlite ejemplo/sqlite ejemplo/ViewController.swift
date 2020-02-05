@@ -43,6 +43,11 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda1", for: indexPath)
         let nombreEquipo = resultadoEquipos[indexPath.row]["nombre_jugador"]
         celda.textLabel?.text = nombreEquipo
+        
+        let nombreArchivo = resultadoEquipos[indexPath.row]["foto_jugador"] ?? "avatar"
+        celda.imageView?.image = UIImage(named: nombreArchivo)
+        
+        
         return celda
     }
     

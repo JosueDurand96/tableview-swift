@@ -43,6 +43,7 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         print("row: ",row,"seccion: ",seccion)
         
         
+        
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda1", for: indexPath)
         celda.textLabel?.text = "Titulo \(row) - \(seccion) "
         return celda
